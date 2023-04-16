@@ -46,7 +46,8 @@ p{
 }
 
 #container{
-  width: 36.0rem;  
+  width: 36.0rem;
+  max-width: 58.8rem;  
   margin: 5.6px auto 0rem;
   padding: 0 2.4rem;
   

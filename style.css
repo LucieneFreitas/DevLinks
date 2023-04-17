@@ -90,11 +90,19 @@ p{
   top: 50%;
   transform: translateY(-50%);
   left: 0;
+
+  animation: switch-back 0.2s;
 }
 
-.light #switch button{ /*qdo trocar para light o icone mudara de posição*/
-  right: 0;
+.light #switch button{ /*qdo trocar para light o ícone mudara de posição*/
+  /*right: 0;
   left: initial;
+  as propriedades acima serão substituídas por: */
+  animation: switch-in .4s forwards; /*1º nome da animação criada, 2º quanto tempo ela vai levar e 3º mantenha as propriedades no slide 1  */
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span{ /*span inline precisa inserir display */
@@ -171,3 +179,21 @@ footer{
 }
 
 
+/* animation */
+@keyframes switch-in { /*vir de uma lado para outro suavemente */
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes switch-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+} 
